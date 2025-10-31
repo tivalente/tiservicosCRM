@@ -27,7 +27,12 @@ SECRET_KEY = "django-insecure-tq0(3^hj@r2x$uq*jpo3ib&=q3o*mp&06ft(x)mw5bg1uhgkg%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "tiservicoscrm.onrender.com",
+    "localhost",
+    "127.0.0.1",
+    os.environ.get("RENDER_EXTERNAL_HOSTNAME", ""),
+]
 
 
 # Application definition
