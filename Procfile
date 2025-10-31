@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicron tiservicos;wsgi --log-file -
+web: gunicorn tiservicos.wsgi:application
