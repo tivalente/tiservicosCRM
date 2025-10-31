@@ -1,0 +1,14 @@
+{%extends "model-page.html" %} {% load crispy_forms_tags %} {%block content %}
+<div>
+  {%if form.erros%} {%for field in form %} {%for error in field.errors%}
+  <div class="alert alert-danger" role="alert">
+    <strong>{{errpr|escape}}</strong>
+  </div>
+  {%endfor%} {%endfor%} {% endif%}
+
+  <form method="POST">
+    {% csrf_token %} {{form|crispy}}
+    <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+  </form>
+  {%endblock %}
+</div>

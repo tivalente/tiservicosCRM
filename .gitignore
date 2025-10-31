@@ -1,0 +1,8 @@
+*.log
+*.pic
+__pycache__/
+db.sqlite3
+.vscode/
+.env
+.venv
+vscode
